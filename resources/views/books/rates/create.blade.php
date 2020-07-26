@@ -21,8 +21,11 @@
             <!-- Replace with your content -->
             <div class="shadow overflow-hidden sm:rounded-lg max-w-full">
                 <div class="bg-white">
-                    <div class="px-4 py-6 max-w-xs">
-                        <x-input name="rate" value="0.0" type="number" step="0.1" min="0.0" max="5.0">Nota</x-input>
+                    <div class="px-4 py-6 max-w-lg">
+                        <div class="block sm:grid grid-cols-2">
+                            <x-input name="rate" value="0.0" type="number" step="0.1" min="0.0" max="5.0">Nota</x-input>
+                        </div>
+                        <x-textarea name="comment">Comentários</x-area>
                     </div>
                 </div>
             </div>

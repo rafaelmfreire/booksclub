@@ -57,9 +57,12 @@
                                 <tr class="hover:bg-yellow-50 odd:bg-gray-100">
                                     <td class="px-6 py-4 border-b border-gray-200 text-base sm:text-sm">
                                         {{ ucfirst($rate->user->name) }}
+                                        <span class="font-medium text-lg mt-3 sm:mt-1 block">
+                                            {{ $rate->rate /10 }}
+                                        </span>
                                     </td>
-                                    <td class="px-6 py-4 border-b border-gray-200 text-base sm:text-sm">
-                                        {{ $rate->rate /10 }}
+                                    <td class="px-6 py-4 leading-4 border-b border-gray-200 text-sm font-light">
+                                        {{ $rate->comment }}
                                     </td>
                                 </tr>
                             @endforeach

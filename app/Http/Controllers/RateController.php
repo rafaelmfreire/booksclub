@@ -46,6 +46,7 @@ class RateController extends Controller
         //
         $validator = Validator::make($request->all(), [
             'rate' => 'required',
+            'comments' => 'nullable',
         ]);
 
         if($validator->fails()) {
@@ -55,7 +56,8 @@ class RateController extends Controller
         $rate = new Rate();
         DB::transaction(function() use($request, $book, $rate) {
             $nota = $request->rate * 10;
-
+            
+            $rate->comment = $request->comment;
             $rate->user_id = auth()->user()->id;
             $rate->book_id = $book->id;
             $rate->rate = $nota;
