@@ -30,7 +30,7 @@ class VoteController extends Controller
 
         $result = DB::table('votes')
             ->select('book_id', 'title',
-                DB::raw('sum(vote) as score'))
+                DB::raw('lpad(sum(vote), 3, "0") as score'))
             ->join('books', 'books.id', '=', 'votes.book_id')
             ->where('election_id', $election->id)
             ->groupByRaw('book_id, title')
