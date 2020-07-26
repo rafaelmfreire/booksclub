@@ -1,0 +1,43 @@
+.card-data-wrapper {
+    @apply px-4 py-2 ;
+}
+.card-data-title {
+    @apply text-sm leading-5 text-gray-500;
+}
+
+.card-data-data {
+    @apply mt-1 text-sm leading-5 font-medium text-gray-900;
+}
+
+// SLIDE TRANSITION
+.slide-fade-enter-active {
+  @apply transform transition ease-in-out duration-500;
+}
+.slide-fade-leave-active {
+    @apply transform transition ease-in-out duration-500;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+    @apply translate-x-full;
+}
+.slide-fade-enter-to, .slide-fade-leave {
+    @apply translate-x-0;
+}
+
+// FADE TRANSITION
+.fade-enter-active {
+  @apply ease-in-out duration-700;
+}
+.fade-leave-active {
+    @apply ease-in-out duration-300;
+}
+.fade-enter, .fade-leave-to {
+    @apply opacity-0;
+}
+.fade-enter-to, .fade-leave {
+    @apply opacity-100; 
+}
+
+@screen sm {
+    .card-data-wrapper { @apply grid px-6; }
+    .card-data-data { @apply mt-0; }
+}
